@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <title>PIZZA WORLD</title>
+
+    <!-- Load CSS libraries -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="big-title">
+            <img src="./img/PizzaWorld-Logo.png" alt="logo">
+        </div>
+        <div class="filter">
+            <div class="filter-left">
+                <label for="area">Select Area:</label>
+                <select id="area-category" class="form-control" style="width: 200px;" onchange="dataManipulation()">
+                    <option value="all">All</option>
+                    <option value="Boston">Boston</option>
+                    <option value="Cambridge">Cambridge</option>
+                    <option value="Somerville">Somerville</option>
+                </select>
+            </div>
+            <div class="filter-right">
+                <label for="device">Select Device</label>
+                <select id = 'order-type' class="form-control" style="width: 200px;" onchange="dataManipulation()">
+                    <option value="all">All</option>
+                    <option value="web">Web</option>
+                    <option value="phone"> Phone</option>
+                </select>
+            </div>
+        </div>
+        <div class="summary">
+            <div id="chart-area">
+                    
+            </div>
+
+            <div class="table-container">
+                <h6 class="table-item">Summary</h6>
+                <div class="table-item" id="total-pizza">
+                </div>
+                <div class="table-item" id="pizza-delivered">
+                </div>
+                <div class="table-item" id="average-time">
+                </div>
+                <div class="table-item", id="total-sales">
+                </div>
+                <div class="table-item", id="feedbacks">
+                    <h6 class="table-item">Feedback</h6>
+                    <div id="feedback-low">
+                        
+                    </div>
+                    <div id="feedback-medium">
+                        
+                    </div>
+                    <div id="feedback-high">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Load JS libraries: jQuery, bootstrap, D3, D3 Tooltips -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/d3.min.js"></script>
+        <script src="js/d3-tip.js"></script>
+
+        <!-- Completed: Data loading, bar chart rendering -->
+        <script src="js/delivery-data.js"></script>
+        <script src="js/feedback-data.js"></script>
+        <script src="js/barchart.js"></script>
+
+        <!-- ****** TODO: FILTER DATA, DISPLAY BAR CHART & KEY FIGURES ****** -->
+        <script src="js/main.js"></script>
+
+</body>
+
+</html>
